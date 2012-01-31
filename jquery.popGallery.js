@@ -1,5 +1,5 @@
 /*!
- * jQuery popGallery - random popping gallery for jquery
+ * jQuery popGallery v.1.0.0.beta - random popping gallery for jquery
  * Copyright(c) 2012 Rohit Joshi <link2j.roy@gmail.com>
  */
 (function($){
