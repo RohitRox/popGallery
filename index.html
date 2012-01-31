@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <title>popGallery | Randomized gallery plugin for jquery </title>
+
+  <script src="jquery.min.js"></script>
+  <script src="jquery.transit.js"></script>
+  <script src="jquery.popGallery.js"></script>
+
+  <style>
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 404px;
+  }
+  ul li{
+    height: 80px;
+    width: 200px;
+    float: left;
+    background-color: #09c;
+    margin: 1px;
+    text-align:center;
+    padding:20px 0px;
+  }
+   ul li a{
+     font-size:24px;
+     text-decoration: none;
+     color:#fff;
+   }
+  .demo-show{
+    clear: both;
+    float: left;
+  }
+  .demo-show div{
+    float: left;
+    padding:6px;
+  }
+  .demo-show ul{
+    float:left;
+  }
+  #footer{
+    clear:both;
+    text-align:center;
+  }
+  </style>
+
+  <script>
+
+
+  $(document).ready(function(){
+
+    $('#gallery1').popGallery({
+      speed:2300,cut_out:4
+      });
+      
+    $('#gallery2').popGallery({
+      speed:3300, 
+      cut_out:4,  
+      rotate: true
+    });
+    
+    $('#gallery3').popGallery({
+       speed:3000, 
+       cut_out:4,  
+       scale: true 
+     });
+     
+     $('#gallery4').popGallery({
+       speed:2800, 
+       cut_out:4,  
+       rotate: true,
+       scale:true
+     });
+
+  });
+
+  </script>
+
+</head>
+
+<body>
+  <h1> popGallery </h1>
+  <h2> An Uncommon Random Gallery For Jquery </h2>
+  <hr />
+  <h2>Examples: <br/>
+    ( Tested in firefox and web-kit, yet not tested in IE . Please comment and post issues and bugs to help to improve. )</h2>
+
+  <div class="demo-show">
+    <ul id="gallery1">
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">6</a></li>
+      <li><a href="">7</a></li>
+      <li><a href="">8</a></li>
+    </ul>
+    <div>
+    <h3>Example 1: Without Any Fancy Transitions</h3>
+    <strong>CODE</strong>
+    <pre>
+      JS:
+      $(document).ready(function(){
+        $('#gallery1').popGallery({
+          speed:2300, //speed of change
+          cut_out:4,  //number of items to show
+        });
+      });
+      MARK-UP:
+      &lt;ul id='gallery1'&gt;
+      &lt;li&gt;&lt;a href=""&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;7&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;8&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    </pre>
+    </div>
+  </div>
+  
+
+  <div class="demo-show">
+    <ul id="gallery2">
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href="">6</a></li>
+      <li><a href="">7</a></li>
+      <li><a href="">8</a></li>
+    </ul>
+    <div>
+    <h3>Example 2: With Rotating Transitions</h3>
+    <strong>CODE</strong>
+    <pre>
+      JS:
+      $(document).ready(function(){
+        $('#gallery2').popGallery({
+          speed:2300, //speed of change
+          cut_out:4,  //number of items to show
+          rotate: true //activate rotating effect
+        });
+      });
+      MARK-UP:
+      &lt;ul id='gallery2'&gt;
+      &lt;li&gt;&lt;a href=""&gt;1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;5&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;6&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;7&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=""&gt;8&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    </pre>
+    </div>
+  </div>
+  
+  <div class="demo-show">
+     <ul id="gallery3">
+       <li><a href="">1</a></li>
+       <li><a href="">2</a></li>
+       <li><a href="">3</a></li>
+       <li><a href="">4</a></li>
+       <li><a href="">5</a></li>
+       <li><a href="">6</a></li>
+       <li><a href="">7</a></li>
+       <li><a href="">8</a></li>
+     </ul>
+     <div>
+     <h3>Example 3: With popping Transitions</h3>
+     <strong>CODE</strong>
+     <pre>
+       JS:
+       $(document).ready(function(){
+         $('#gallery3').popGallery({
+           speed:2300, //speed of change
+           cut_out:4,  //number of items to show
+           scale: true //activate scaling/popping effect
+         });
+       });
+       MARK-UP:
+       &lt;ul id='gallery3'&gt;
+       &lt;li&gt;&lt;a href=""&gt;1&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=""&gt;2&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=""&gt;3&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=""&gt;4&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=""&gt;5&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=""&gt;6&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=""&gt;7&lt;/a&gt;&lt;/li&gt;
+       &lt;li&gt;&lt;a href=""&gt;8&lt;/a&gt;&lt;/li&gt;
+       &lt;/ul&gt;
+     </pre>
+     </div>
+   </div>
+   
+   
+   <div class="demo-show">
+      <ul id="gallery4">
+        <li><a href="">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li><a href="">5</a></li>
+        <li><a href="">6</a></li>
+        <li><a href="">7</a></li>
+        <li><a href="">8</a></li>
+      </ul>
+      <div>
+      <h3>Example 4: With both Scale &amp; Rotate Transitions</h3>
+      <strong>CODE</strong>
+      <pre>
+        JS:
+        $(document).ready(function(){
+          $('#gallery4').popGallery({
+            speed:2300, //speed of change
+            cut_out:4,  //number of items to show
+            rotate: true, //activate rotating effect
+            scale:true //activate popping effect
+          });
+        });
+        MARK-UP:
+        &lt;ul id='gallery4'&gt;
+        &lt;li&gt;&lt;a href=""&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;5&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;6&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;7&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=""&gt;8&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      </pre>
+      </div>
+    </div>
+<div id="footer">
+  jQuery popGallery - random popping gallery for jquery | Copyright &copy; 2012 Rohit Joshi. &lt;link2j.roy@gmail.com&gt; | transitions borrowed from Rico Sta.
+</div>
+</body>
+</html>
