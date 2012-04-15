@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>popGallery | Randomized gallery plugin for jquery </title>
 
   <script src="jquery.min.js"></script>
@@ -13,30 +13,29 @@
   body{
     margin: 0;
     padding: 0;
-    padding-top: 140px;
+    padding-top: 95px;
     font-family: helvetica,arial,sans-serif;
     color: #5E9DC8;
-    background-color: #DFEFF0;
+    background-color: #2e2e2e;
   }
   #wrap{
     padding: 20px;
   }
   #header{
     position: fixed;
-    height: 100px;
+    height: 85px;
     top: 0;
-    background-color: #DFEFF0;
+    background-color: #143352;
     left: 0;
     right: 0;
-    padding: 20px;
     text-align: center;
-    background-color: orange;
-    border-bottom: 1px solid #fff;
     color: #fff;
     z-index: 1000;
+    opacity: .9;
+    border-bottom: 2px solid rgba(15, 38, 61, 0.5);
   }
   #header h1, #header h2{
-    margin: 10px 0px;
+    margin: 5px 0px;
   }
   ul{
     list-style: none;
@@ -87,6 +86,12 @@
     text-align:center;
     line-height: 26px;
   }
+  #footer a{
+    padding: 4px 10px;
+    background: #ccc;
+    color: #333;
+    text-decoration: none;
+  }
   </style>
 
   <script>
@@ -97,25 +102,25 @@
   $('#gallery1').popGallery({
       speed:2300,cut_out:4
       });
-      
+
     $('#gallery2').popGallery({
-      speed:3300, 
-      cut_out:4,  
+      speed:3300,
+      cut_out:4,
       rotate: true
     });
-    
+
     $('#gallery3').popGallery({
-       speed:3000, 
-       cut_out:4,  
-       scale: true 
+       speed:3000,
+       cut_out:4,
+       scale: true
      });
-     
+
      $('#gallery4').popGallery({
-       speed:2800, 
-       cut_out:4,  
+       speed:2800,
+       cut_out:4,
        rotate: true,
        scale:true
-     });    
+     });
 
   });
 
@@ -133,7 +138,7 @@
   <p>Sometimes we want random items to be fetched from a list and just pop them, rather than a slide show.
         PopGallery is the right fit for such situation where we want random popping items. </p>
   <h2>Examples: </h2>
- 
+
 
   <div class="demo-show">
     <ul id="gallery1">
@@ -171,7 +176,7 @@
     </pre>
     </div>
   </div>
-  
+
 
   <div class="demo-show">
     <ul id="gallery2">
@@ -210,7 +215,7 @@
     </pre>
     </div>
   </div>
-  
+
   <div class="demo-show">
      <ul id="gallery3">
        <li><a href="">1</a></li>
@@ -248,8 +253,8 @@
      </pre>
      </div>
    </div>
-   
-   
+
+
    <div class="demo-show">
       <ul id="gallery4">
         <li><a href="">1</a></li>
@@ -297,3 +302,4 @@
 </div>
 </body>
 </html>
+
