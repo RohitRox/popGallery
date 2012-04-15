@@ -10,6 +10,34 @@
   <script src="jquery.popGallery.js"></script>
 
   <style>
+  body{
+    margin: 0;
+    padding: 0;
+    padding-top: 140px;
+    font-family: helvetica,arial,sans-serif;
+    color: #5E9DC8;
+    background-color: #DFEFF0;
+  }
+  #wrap{
+    padding: 20px;
+  }
+  #header{
+    position: fixed;
+    height: 100px;
+    top: 0;
+    background-color: #DFEFF0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: orange;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    z-index: 1000;
+  }
+  #header h1, #header h2{
+    margin: 10px 0px;
+  }
   ul{
     list-style: none;
     padding: 0;
@@ -33,10 +61,23 @@
   .demo-show{
     clear: both;
     float: left;
+    padding: 20px;
+    background-color: #333;
+    box-shadow: inset 0px 0px 4px #000;
+    border-radius: 4px;
+    width: 100%;
+    margin: 10px 0px;
   }
   .demo-show div{
+    background: none repeat scroll 0 0 #222222;
+    border-radius: 4px 4px 4px 4px;
+    color: #71C42B;
     float: left;
-    padding:6px;
+    margin: 0 20px;
+    padding: 6px;
+  }
+  .demo-show div pre{
+    font-size: 12px;
   }
   .demo-show ul{
     float:left;
@@ -44,6 +85,7 @@
   #footer{
     clear:both;
     text-align:center;
+    line-height: 26px;
   }
   </style>
 
@@ -52,7 +94,7 @@
 
   $(document).ready(function(){
 
-    $('#gallery1').popGallery({
+  $('#gallery1').popGallery({
       speed:2300,cut_out:4
       });
       
@@ -73,7 +115,7 @@
        cut_out:4,  
        rotate: true,
        scale:true
-     });
+     });    
 
   });
 
@@ -82,11 +124,15 @@
 </head>
 
 <body>
+  <div id="wrap">
+  <div id="header">
   <h1> popGallery </h1>
-  <h2> An Uncommon Random Gallery For Jquery </h2>
-  <hr />
-  <h2>Examples: <br/>
-    ( Tested in firefox and web-kit, yet not tested in IE . Please comment and post issues and bugs to help to improve. )</h2>
+  <h2> Jquery Plugin for randomized galleries</h2>
+  </div>
+
+  <p>Sometimes we want random items to be fetched from a list and just pop them, rather than a slide show.
+        PopGallery is the right fit for such situation where we want random popping items. </p>
+  <h2>Examples: </h2>
  
 
   <div class="demo-show">
@@ -245,7 +291,9 @@
 <div id="footer">
   jQuery popGallery - random popping gallery for jquery | Copyright &copy; 2012 Rohit Joshi. &lt;link2j.roy@gmail.com&gt; | transitions borrowed from Rico Sta.
   <br />
+  ( Comments, issues and bugs are welcomed. :-) )<br/>
    <a href="Project is available @ https://github.com/RohitRox/popGallery">project @github</a>
+</div>
 </div>
 </body>
 </html>
